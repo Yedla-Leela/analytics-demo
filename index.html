@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <script>
+    window.digitalData = window.digitalData || {};
+
+    digitalData = {
+      page: {
+        pageName: document.title || "HomePage",
+        pageURL: window.location.href,
+        pagePath: window.location.pathname,
+        siteSection: "Landing",
+        siteSubSection: "",
+        server: window.location.hostname
+      },
+
+      customer: {
+        loginStatus: "LoggedIn"
+      },
+
+      orderDetails: {
+        type: "PrePaid",
+        id: "1221ASROSL34"
+      },
+
+      event: {
+        timestamp: new Date().toISOString()
+      }
+    };
+
+    console.log("digitalData:", digitalData);
+  </script>
+
+  <!-- Adobe Launch -->
+  <script src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-e6b9da7e8b2c-development.min.js" async></script>
+
+  <title>Suchi's Github page</title>
+</head>
+
+<body>
+  <h2>Adobe Analytics Demo Page</h2>
+  <p>
+    This page has Adobe Analytics implemented via AEP WebSDK
+    for ACN LCT Training
+  </p>
+</body>
+</html>
