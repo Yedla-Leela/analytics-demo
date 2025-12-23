@@ -12,17 +12,36 @@
         pageName: document.title || "HomePage",
         pageURL: window.location.href,
         pagePath: window.location.pathname,
+
+        /* Props */
         siteSection: "Landing",
+        pageType: "Demo",
+        language: "en",
+
         siteSubSection: "",
         server: window.location.hostname
       },
+
+      user: {
+        /* eVars */
+        userId: "U12345",
+        userType: "Registered"
+      },
+
+      marketing: {
+        /* eVar */
+        channel: "Organic Search"
+      },
+
       customer: {
         loginStatus: "LoggedIn"
       },
+
       orderDetails: {
         type: "PrePaid",
         id: "1221ASROSL34"
       },
+
       event: {
         timestamp: new Date().toISOString()
       }
@@ -30,7 +49,7 @@
   </script>
 
   <!-- Adobe Launch -->
- <script src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-d8606b016113-development.min.js" async></script>
+  <script src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-d8606b016113-development.min.js" async></script>
 </head>
 
 <body>
