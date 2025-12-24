@@ -7,29 +7,30 @@
   <title>Leela's Github page</title>
 
   <script type="text/javascript">
+    // Function to generate random Order ID
+    function generateOrderId() {
+      return "ORD-" + Math.floor(Math.random() * 1000000);
+    }
+
     window.digitalData = {
       page: {
         pageName: document.title || "HomePage",
         pageURL: window.location.href,
         pagePath: window.location.pathname,
 
-        /* Props */
         siteSection: "Landing",
         pageType: "Demo",
         language: "en",
-
         siteSubSection: "",
         server: window.location.hostname
       },
 
       user: {
-        /* eVars */
         userId: "U12345",
         userType: "Registered"
       },
 
       marketing: {
-        /* eVar */
         channel: "Organic Search"
       },
 
@@ -39,7 +40,7 @@
 
       orderDetails: {
         type: "PrePaid",
-        id: "1221ASROSL34"
+        id: generateOrderId()   <!-- 🔥 Dynamic Order ID -->
       },
 
       event: {
@@ -49,7 +50,9 @@
   </script>
 
   <!-- Adobe Launch -->
-  <script type="text/javascript" src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-d8606b016113-development.min.js"></script>
+  <script type="text/javascript"
+    src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-d8606b016113-development.min.js">
+  </script>
 </head>
 
 <body>
@@ -59,7 +62,6 @@
     for ACN LCT Training
   </p>
 
-  <!-- Added Button -->
   <input type="button" id="demo-click-btn" value="Click Me" />
 </body>
 </html>
