@@ -1,40 +1,64 @@
-<script type="text/javascript">
-  function generateOrderId() {
-    return "ORD-" + Math.floor(Math.random() * 1000000);
-  }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Leela's Github page</title>
 
-  window.digitalData = {
-    page: {
-      pageName: document.title || "HomePage",
-      pageURL: window.location.href,
-      pagePath: window.location.pathname,
-      siteSection: "Landing",
-      pageType: "Demo",
-      language: "en",
-      siteSubSection: "",
-      server: window.location.hostname
-    },
-
-    user: {
-      userId: "U12345",
-      userType: "Registered"
-    },
-
-    marketing: {
-      channel: "Organic Search"
-    },
-
-    customer: {
-      loginStatus: "LoggedIn"
-    },
-
-    orderDetails: {
-      type: "PrePaid",
-      id: generateOrderId() // Dynamic Order ID
-    },
-
-    event: {
-      timestamp: new Date().toISOString()
+  <script type="text/javascript">
+    function generateOrderId() {
+      return "ORD-" + Math.floor(Math.random() * 1000000);
     }
-  };
-</script>
+
+    window.digitalData = {
+      page: {
+        pageName: document.title || "HomePage",
+        pageURL: window.location.href,
+        pagePath: window.location.pathname,
+        siteSection: "Landing",
+        pageType: "Demo",
+        language: "en",
+        siteSubSection: "",
+        server: window.location.hostname
+      },
+
+      user: {
+        userId: "U12345",
+        userType: "Registered"
+      },
+
+      marketing: {
+        channel: "Organic Search"
+      },
+
+      customer: {
+        loginStatus: "LoggedIn"
+      },
+
+      orderDetails: {
+        type: "PrePaid",
+        id: generateOrderId()
+      },
+
+      event: {
+        timestamp: new Date().toISOString()
+      }
+    };
+  </script>
+
+  <!-- Adobe Launch -->
+  <script type="text/javascript"
+    src="https://assets.adobedtm.com/e72b4113c11a/8a1f7e93d46e/launch-d8606b016113-development.min.js">
+  </script>
+</head>
+
+<body>
+  <h2>Adobe Analytics Demo Page</h2>
+  <p>
+    This page has Adobe Analytics implemented via AEP WebSDK
+    for ACN LCT Training
+  </p>
+
+  <input type="button" id="demo-click-btn" value="Click Me" />
+</body>
+</html>
