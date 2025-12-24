@@ -6,9 +6,10 @@
   <title>Leela's Github page</title>
 
   <script type="text/javascript">
-    function generateOrderId() {
+    // Make generateOrderId globally accessible
+    window.generateOrderId = function() {
       return "ORD-" + Math.floor(Math.random() * 1000000);
-    }
+    };
 
     window.digitalData = {
       page: {
@@ -37,7 +38,7 @@
 
       orderDetails: {
         type: "PrePaid",
-        id: generateOrderId()
+        id: window.generateOrderId()
       },
 
       event: {
