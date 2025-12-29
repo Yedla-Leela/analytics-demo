@@ -6,9 +6,14 @@
   <title>Leela's Github page</title>
 
   <script type="text/javascript">
-    // Make generateOrderId globally accessible
+    // Generate random Order ID
     window.generateOrderId = function() {
       return "ORD-" + Math.floor(Math.random() * 1000000);
+    };
+
+    // Generate random User ID in format U12345
+    window.generateUserId = function() {
+      return "U" + Math.floor(10000 + Math.random() * 90000);
     };
 
     window.digitalData = {
@@ -24,7 +29,7 @@
       },
 
       user: {
-        userId: "U12345",
+        userId: window.generateUserId(),
         userType: "Registered"
       },
 
