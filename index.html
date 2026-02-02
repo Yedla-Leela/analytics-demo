@@ -66,5 +66,47 @@
   </p>
 
   <input type="button" id="demo-click-btn" value="Click Me" />
+
+  <!-- Internal Link for Non Page View Call -->
+  <p style="margin-top:20px;">
+    <a href="#internal-section" id="internal-link">
+      Go to Internal Section
+    </a>
+  </p>
+
+  <!-- Dummy content to allow scroll -->
+  <div style="height:800px;"></div>
+
+  <div id="internal-section">
+    <h3>Internal Section</h3>
+    <p>You reached here by clicking the internal link.</p>
+  </div>
+
+  <!-- Non Page View Event Tracking -->
+  <script type="text/javascript">
+    document.getElementById("internal-link").addEventListener("click", function () {
+
+      if (window.alloy) {
+        window.alloy("sendEvent", {
+          xdm: {
+            eventType: "web.webinteraction.linkClicks",
+            web: {
+              webInteraction: {
+                name: "Internal Link Click",
+                type: "other",
+                URL: window.location.href + "#internal-section",
+                linkClicks: {
+                  value: 1
+                }
+              }
+            }
+          }
+        });
+      }
+
+      console.log("Non-page-view internal link click event fired");
+    });
+  </script>
+
 </body>
 </html>
